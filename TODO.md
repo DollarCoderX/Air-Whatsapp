@@ -1,0 +1,6 @@
+- [x] Update emoji reaction: ensure every command gets a different emoji (handled in src/handler.js)
+- [x] Fix `.bypass nosave` sticker bypass (handled in src/commands/bypass.js)
+- [ ] Add `.movie` command
+- [ ] Fix `.song` to bypass no save sticker issues (send as WhatsApp audio instead of document)
+- [ ] Wire `.movie` into handler.js command dispatcher
+- [ ] Sanity check by running a build/start command (if available)

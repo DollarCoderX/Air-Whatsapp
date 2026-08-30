@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Air— Live Dashboard</title>
+  <link rel="stylesheet" href="/dashboard/app.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="brand">
+        <div class="logo">😊</div>
+        <div>
+          <h1>Air</h1>
+          <div class="subtitle">Live Dashboard</div>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="openBtn" class="btn small">Open in new window</button>
+        <div id="status" class="pill">Connecting…</div>
+      </div>
+    </header>
+
+    <main>
+      <aside class="left">
+        <section class="panel" id="overview">
+          <h2>Overview</h2>
+          <div class="stat"><span class="k">State</span><span class="v" id="state">—</span></div>
+          <div class="stat"><span class="k">Number</span><span class="v" id="number">—</span></div>
+          <div class="stat"><span class="k">Uptime</span><span class="v" id="uptime">—</span></div>
+          <div class="stat"><span class="k">Engine</span><span class="v">AIR Intelligence</span></div>
+        </section>
+
+        <section class="panel" id="providers">
+          <h2>Provider Events</h2>
+          <div class="provider-list-wrap">
+            <ul id="providersList" class="log"></ul>
+          </div>
+        </section>
+      </aside>
+
+      <section class="panel feed" id="feedPanel">
+        <div class="feed-head">
+          <h2>Live Feed</h2>
+          <div class="feed-controls">
+            <input id="filterInput" placeholder="Filter text..." />
+            <div class="btn-group">
+              <button id="allBtn" class="btn small active">All</button>
+              <button id="activityBtn" class="btn small">Activity</button>
+              <button id="providerBtn" class="btn small">Provider</button>
+            </div>
+            <button id="copyLatest" class="btn small">Copy Latest</button>
+            <button id="clearBtn" class="btn small ghost">Clear</button>
+          </div>
+        </div>
+
+        <ul id="activity" class="log"></ul>
+      </section>
+    </main>
+  </div>
+  <script src="/dashboard/app.js"></script>
+</body>
+</html>

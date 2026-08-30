@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: Air
+    runtime: node
+    buildCommand: pnpm install --no-frozen-lockfile
+    startCommand: pnpm --filter @workspace/dollarbot run start
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
+      - key: AUTH_DIR
+        value: /var/data/auth_info_baileys
+      - key: DATA_DIR
+        value: /var/data/Air_data
+    disk:
+      name: Air-disk
+      mountPath: /var/data
+      sizeGB: 1
